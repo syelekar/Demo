@@ -1,0 +1,17 @@
+name: QARelease
+on: 
+  workflow_dispatch:
+    inputs:
+      releaseCard:
+        description: 'Release card'     
+        required: true
+        
+jobs:
+  QARelease:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy QA
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: 'https://7d6cf6a13b88.ngrok.io/api/webhooks/gitactions/triggers/qa/123'
+          method: 'POST'
