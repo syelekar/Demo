@@ -15,4 +15,4 @@ jobs:
         with:
           url: 'https://7d6cf6a13b88.ngrok.io/api/webhooks/gitactions/triggers/qa/123'
           method: 'POST'
-          data:  YAML.stringify([true, false, 'maybe', null])
+          data:  'asdsd'
